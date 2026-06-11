@@ -46,6 +46,19 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+# manually forcing this theme to have children menu items
+menus:
+  navigation:
+    - title: "Home"
+      url: "/"
+      identifier: "home"
+    - title: "Projects"
+      url: "/projects/"
+      identifier: "projects"
+    - title: "Crimetology"
+      url: "/projects/crimetology/"
+      parent: "projects" 
+
 author:
   name   : "Anonymous"
   avatar : "/assets/images/bio-photo.png"
