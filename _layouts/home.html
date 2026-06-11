@@ -14,7 +14,7 @@ layout: archive
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="background: var(--card-bg, #f2f3f5); padding: 1.5rem; border-radius: 8px; height: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         {% if project.header.teaser %}
           <div class="archive__item-teaser" style="margin-bottom: 1rem;">
-            <img src="{{ project.header.teaser | relative_url }}" alt="" style="border-radius: 4px; width: 100%; object-fit: cover;">
+            <img src="{{ project.header.teaser | relative_url }}" alt="" style="border-radius: 4px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
           </div>
         {% endif %}
         <h3 class="archive__item-title no_toc" itemprop="headline" style="margin-top: 0;">
