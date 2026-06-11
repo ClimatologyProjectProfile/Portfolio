@@ -9,7 +9,7 @@ layout: archive
 
 <div class="grid__wrapper">
   {% assign projects = site.projects | reverse %}
-  {% for project in projects limit: 3 %}
+  {% for project in projects limit: 2 %}
     <div class="grid__item">
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="background: var(--card-bg, #f2f3f5); padding: 1.5rem; border-radius: 8px; height: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         {% if project.header.teaser %}
@@ -31,35 +31,5 @@ layout: archive
 </div>
 
 <hr style="margin: 3rem 0;">
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-<div class="grid__wrapper">
-  {% for post in posts limit: 3 %}
-    <div class="grid__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="background: var(--card-bg, #f2f3f5); padding: 1.5rem; border-radius: 8px; height: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-        {% if post.header.teaser %}
-          <div class="archive__item-teaser" style="margin-bottom: 1rem;">
-            <img src="{{ post.header.teaser | relative_url }}" alt="" style="border-radius: 4px; width: 100%; object-fit: cover;">
-          </div>
-        {% endif %}
-        <h3 class="archive__item-title no_toc" itemprop="headline" style="margin-top: 0;">
-          <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
-        </h3>
-        {% if post.excerpt %}
-          <p class="archive__item-excerpt" itemprop="description" style="font-size: 0.9em; margin-bottom: 0;">
-            {{ post.excerpt | markdownify | strip_html | truncate: 120 }}
-          </p>
-        {% endif %}
-      </article>
-    </div>
-  {% endfor %}
-</div>
 
 {% include paginator.html locale=locale %}
