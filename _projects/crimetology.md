@@ -3,7 +3,7 @@ permalink: /projects/crimetology/
 title: "Crimetology"
 header:
   teaser: /assets/images/crimetology_image_small.png
-layout: home
+layout: home_norecent
 author_profile: true
 ---
 <!-- Some Bages -->
