@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About"
-layout: home
+layout: splash
 ---
 
 About text here
