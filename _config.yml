@@ -61,24 +61,16 @@ footer:
 
 
 defaults:
-  # _posts
+  # _pages
   - scope:
-      path: ""
-      type: posts
+      path: "_projects"
+      type: projects
     values:
       layout: single
       author_profile: true
       read_time: true
       comments: true
       share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
 
 category_archive:
   type: liquid
