@@ -1,4 +1,7 @@
-
+---
+permalink: /projects/
+title: "Projects"
+---
 <!-- Some Bages -->
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Data Science](https://img.shields.io/badge/Domain-Data%20Science-green.svg)
