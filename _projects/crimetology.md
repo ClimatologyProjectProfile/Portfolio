@@ -11,7 +11,7 @@ layout: splash
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange.svg)
 
 
-# **Title**: Crimetology, Crime Occurrence & Weather Data Analysis
+# Crimetology, Crime Occurrence & Weather Data Analysis
 
 ## Introduction
 Crimetology is an end-to-end data science project exploring the relationship between meteorological trends and crime patterns.
