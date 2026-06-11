@@ -5,7 +5,7 @@ layout: archive
 
 {{ content }}
 
-## Recent Projects
+<h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_projects | default: "Recent Projects" }}</h3>
 
 <div class="grid__wrapper">
   {% assign projects = site.projects | reverse %}
