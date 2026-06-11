@@ -1,22 +1,6 @@
 ---
 layout: archive
 ---
-<ul class="sf-menu dd-menu pull-right" role="menu">
-  {% for link in site.menus.navigation %}
-    {% if link.parent == nil %}
-      <li><a href="{{ link.url | absolute_url }}"{% if link.target %} target="_blank" {% endif %}>{{ link.title }}</a>
-        {% assign nav_level_2 = site.menus.navigation | where: 'parent', link.identifier %}
-        {% if nav_level_2.size > 0 %}
-          <ul>
-              {% for child in nav_level_2 %}
-              <li><a href="{{ child.url | absolute_url }}"{% if child.target %} target="_blank" {% endif %}>{{ child.title }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
 
 {%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
