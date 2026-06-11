@@ -3,12 +3,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Data Science Professional Portfolio - Crimetology
+title: "BPP Profession Portfolio"
 email:
 description: "Data Science Apprentice portfolio."
 github_username: ClimatologyProjectProfile
-minimal_mistakes_skin: default
-search: true
+minimal_mistakes_skin: mint
+search: false
+masthead_title: "Home"
+breadcrumbs: false
 
 # Build settings
 markdown: kramdown
