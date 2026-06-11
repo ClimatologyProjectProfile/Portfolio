@@ -5,6 +5,32 @@ layout: archive
 
 {{ content }}
 
+
+## Recent Projects
+
+<div class="entries-grid">
+  {% assign projects = site.projects | reverse %}
+  {% for project in projects limit: 3 %}
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        {% if project.header.teaser %}
+          <div class="archive__item-teaser">
+            <img src="{{ project.header.teaser | relative_url }}" alt="">
+          </div>
+        {% endif %}
+        <h3 class="archive__item-title no_toc" itemprop="headline">
+          <a href="{{ project.url | relative_url }}" rel="permalink">{{ project.title }}</a>
+        </h3>
+        {% if project.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">
+            {{ project.excerpt | markdownify | strip_html | truncate: 160 }}
+          </p>
+        {% endif %}
+      </article>
+    </div>
+  {% endfor %}
+</div>
+
 <h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
