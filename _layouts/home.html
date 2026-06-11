@@ -5,31 +5,32 @@ layout: archive
 
 {{ content }}
 
+## Recent Projects
 
-<h3 class="archive__subtitle">{{default: "Recent Projects" }}</h3>
-
-<div class="entries-grid">
+<div class="grid__wrapper">
   {% assign projects = site.projects | reverse %}
   {% for project in projects limit: 3 %}
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    <div class="grid__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="background: var(--card-bg, #f2f3f5); padding: 1.5rem; border-radius: 8px; height: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         {% if project.header.teaser %}
-          <div class="archive__item-teaser">
-            <img src="{{ project.header.teaser | relative_url }}" alt="">
+          <div class="archive__item-teaser" style="margin-bottom: 1rem;">
+            <img src="{{ project.header.teaser | relative_url }}" alt="" style="border-radius: 4px; width: 100%; object-fit: cover;">
           </div>
         {% endif %}
-        <h3 class="archive__item-title no_toc" itemprop="headline">
+        <h3 class="archive__item-title no_toc" itemprop="headline" style="margin-top: 0;">
           <a href="{{ project.url | relative_url }}" rel="permalink">{{ project.title }}</a>
         </h3>
         {% if project.excerpt %}
-          <p class="archive__item-excerpt" itemprop="description">
-            {{ project.excerpt | markdownify | strip_html | truncate: 160 }}
+          <p class="archive__item-excerpt" itemprop="description" style="font-size: 0.9em; margin-bottom: 0;">
+            {{ project.excerpt | markdownify | strip_html | truncate: 120 }}
           </p>
         {% endif %}
       </article>
     </div>
   {% endfor %}
 </div>
+
+<hr style="margin: 3rem 0;">
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
 
@@ -39,9 +40,26 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html locale=locale entries=posts type=entries_layout %}
+<div class="grid__wrapper">
+  {% for post in posts limit: 3 %}
+    <div class="grid__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="background: var(--card-bg, #f2f3f5); padding: 1.5rem; border-radius: 8px; height: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        {% if post.header.teaser %}
+          <div class="archive__item-teaser" style="margin-bottom: 1rem;">
+            <img src="{{ post.header.teaser | relative_url }}" alt="" style="border-radius: 4px; width: 100%; object-fit: cover;">
+          </div>
+        {% endif %}
+        <h3 class="archive__item-title no_toc" itemprop="headline" style="margin-top: 0;">
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description" style="font-size: 0.9em; margin-bottom: 0;">
+            {{ post.excerpt | markdownify | strip_html | truncate: 120 }}
+          </p>
+        {% endif %}
+      </article>
+    </div>
+  {% endfor %}
 </div>
 
 {% include paginator.html locale=locale %}
