@@ -77,3 +77,15 @@ defaults:
       share: true
       sidebar:
         nav: "docs"  
+
+# _pages (for about)
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      sidebar:
+        nav: "docs"  
