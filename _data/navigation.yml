@@ -3,3 +3,6 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
+    children:
+      - title: "Crimetology"
+        url: /projects/crimetology/
