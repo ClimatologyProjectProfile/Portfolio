@@ -1,7 +1,7 @@
 ---
 permalink: /projects/
 title: "Projects"
-layout: splash
+layout: home
 ---
 
 adding some dummy content here
