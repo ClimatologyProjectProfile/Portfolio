@@ -47,7 +47,7 @@ plugins:
 
 author:
   name   : "Anonymous"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.png"
   bio    : "Data Science Apprentice | Python | Machine Learning | Analytics"
   links:
     - label: "GitHub"
