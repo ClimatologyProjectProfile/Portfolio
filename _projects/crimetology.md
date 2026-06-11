@@ -3,6 +3,7 @@ permalink: /projects/crimetology/
 title: "Crimetology"
 header:
   teaser: /assets/images/crimetology_image_small.png
+layout: splash
 ---
 <!-- Some Bages -->
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
