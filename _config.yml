@@ -46,7 +46,7 @@ plugins:
 author:
   name   : "Anonymous"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "Data Science Apprentice | Python | Machine Learning | Analytics"
+  bio    : "An open space for my Data Science projects."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
