@@ -1,0 +1,30 @@
+#hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #509a74;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
