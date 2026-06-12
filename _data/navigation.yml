@@ -1,9 +1,3 @@
 main:
-  - title: "About"
-    url: /about/
-    
-  - title: "Projects"
-    url: /projects/
-    children:
-      - title: "Crimetology"
-        url: /projects/crimetology/
+  - title: "Crimetology"
+    url: /projects/crimetology/

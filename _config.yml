@@ -22,7 +22,6 @@ paginate_path: /page:num/
 timezone: "Europe/London"
 
 include:
-  - _pages
   - _projects
 
 # Exclude from processing.
@@ -46,23 +45,11 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-# manually forcing this theme to have children menu items
-menus:
-  navigation:
-    - title: "Home"
-      url: "/"
-      identifier: "home"
-    - title: "Projects"
-      url: "/projects/"
-      identifier: "projects"
-    - title: "Crimetology"
-      url: "/projects/crimetology/"
-      parent: "projects" 
 
 author:
   name   : "Anonymous"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "An open space for my Data Science projects."
+  bio    : "An open space for a BPP Data Science project."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -88,17 +75,17 @@ defaults:
       sidebar:
         nav: "docs"  
 
-# _pages (for about)
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      read_time: true
-      comments: true
-      share: true
-      sidebar:
-        nav: "docs"  
+# # _pages (for about)
+#   - scope:
+#       path: ""
+#       type: pages
+#     values:
+#       layout: single
+#       read_time: true
+#       comments: true
+#       share: true
+#       sidebar:
+#         nav: "docs"  
 
 
 
