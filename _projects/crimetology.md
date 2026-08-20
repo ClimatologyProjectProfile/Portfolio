@@ -9,13 +9,27 @@ author_profile: true
 <!-- Some Bages -->
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Data Science](https://img.shields.io/badge/Domain-Data%20Science-green.svg)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange.svg)
+
 
 
 # Crimetology: How Weather Shifts Spatial Crime Patterns
 
 A data science project investigating how weather influences crime occurrence across Leisure versus Retail areas.
 
+Reproduce This Project Yourself:
+| Resource | Description | Link |
+| :--- | :--- | :--- |
+| **Crime Data** | Raw UK Police street-level data archive | [data.police.uk](https://data.police.uk/data/archive/) |
+| **Weather Data** | HadUK-Grid 1km gridded climate dataset | [CEDA Archive](https://catalogue.ceda.ac.uk/uuid/789b3065d74a4c948ab05d33556c86d0/)|
+| **Code** | Complete Python ETL, analysis, & modeling scripts | [GitHub Crimetology Repo](https://github.com/ClimatologyProjectProfile/crimetology/tree/main) |
+
+
+## Table of Contents
+* [Executive Summary](#executive-summary)
+* [Data Pipeline & Engineering](#1-the-data-pipeline--engineering-challenge)
+* [Spatial Clustering & Proxy Context Labeling](#2-spatial-clustering--proxy-context-labeling)
+* [Statistical Inference & Findings](#3-statistical-inference--findings)
+* [Final Remarks and Limitations](#4-final-remarks-and-limitations)
 
 ## Executive Summary
 
@@ -87,10 +101,47 @@ Histograms revealed that Retail-associated crime distributions were heavily righ
 
 ## 3. Statistical Inference & Findings
 
-A **Binary Logistic Regression** model (`statsmodels`) evaluated whether maximum temperature (`tasmax`) and relative humidity (`hurs`) predicted whether a crime occurred in a **Leisure (1)** versus **Retail (0)** cluster.
+A Binary Logistic Regression model evaluated whether maximum temperature and relative humidity predicted whether a crime occurred in a Leisure versus Retail cluster.  
 
 
-# TODO
+Using the exact coefficients from the Logit model we can plot how weather translates into predicted probabilities of crime occurring in a Leisure context.
+
+
+![Figure6: Bivariate Logistic Regression Curves](../assets/images/probability_leisure_context.png)
+
+*Figure 6: The joint atmospheric effect, this chart demonstrates how temperature and relative humidity work together. High humidity shifts the entire curve upward, increasing the odds of leisure-context crimes across all temperature ranges.*
+
+### How did we get to the above figure? 
+
+The fundamental equation for a bivariate logistic regression model is written in terms of log-odds (the logit function):
+
+$$\text{logit}(P) = \ln\left(\frac{P}{1 - P}\right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2$$
+
+**Where:**
+* $P$ = Probability of a crime occurring in a **Leisure** context ($1$) versus a **Retail** context ($0$).
+* $\frac{P}{1 - P}$ = The odds of the event occurring.
+* $X_1$ = Mean maximum daily temperature (`tasmax`).
+* $X_2$ = Relative humidity (`hurs`).
+
+
+Substituting the predictor variable constants returned by [Statsmodels Logit](https://www.statsmodels.org/stable/generated/statsmodels.discrete.discrete_model.Logit.html#statsmodels.discrete.discrete_model.Logit) into the equation
+
+* **Intercept ($\beta_0$):** $-3.5269$
+* **Temperature Coefficient ($\beta_1$):** $0.0315$
+* **Humidity Coefficient ($\beta_2$):** $0.0205$
+
+
+we get our bivariate model as
+
+$$\ln\left(\frac{P}{1 - P}\right) = -3.5269 + 0.0315(\text{tasmax}) + 0.0205(\text{hurs}).$$
+
+Rearage this gives you
+
+$$P(\text{Leisure}) = \frac{1}{1 + e^{-(-3.5269 + 0.0315 \cdot \text{tasmax} + 0.0205 \cdot \text{hurs})}}$$
+
+which you can use with humidity set to 50% and 80% to plot the red and blue lines respectively. 
+
+
 
 ## 4. Final Remarks and Limitations
 
@@ -105,10 +156,3 @@ While this project demonstrates the feasibility of combining meteorological obse
 
 
 
-## Reproduce This Project Yourself
-
-* Crime Data:
-* Weather Data:
-* Code: 
-
----
