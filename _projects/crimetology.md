@@ -18,7 +18,7 @@ A data science project investigating how weather influences crime occurrence acr
 
 Reproduce This Project Yourself:
 | Resource | Description | Link |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | **Crime Data** | Raw UK Police street-level data archive | [data.police.uk](https://data.police.uk/data/archive/) |
 | **Weather Data** | HadUK-Grid 1km gridded climate dataset | [CEDA Archive](https://catalogue.ceda.ac.uk/uuid/789b3065d74a4c948ab05d33556c86d0/)|
 | **Code** | Complete Python ETL, analysis, & modeling scripts | [GitHub Crimetology Repo](https://github.com/ClimatologyProjectProfile/crimetology/tree/main) |
