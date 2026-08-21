@@ -49,7 +49,7 @@ Every 1% increase in relative humidity increases the odds of crime in a Leisure 
 
 When combines this increases the odds of crime events in Leisure zones by **5.37%**
 
-![Fig1: Understand Odds]({{ '/assets/images.png' | relative_url }})
+![Fig1: Understand Odds]({{ '/assets/images/understanding_odds.png' | relative_url }})
 *Figure 1:*
 
 
