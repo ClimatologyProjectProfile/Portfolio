@@ -3,29 +3,95 @@ layout: home_norecent
 author_profile: true
 ---
 
-
 <section id="hero">
+  <span class="hero-badge">Apprenticeship Portfolio</span>
   <h1>Intro</h1>
-  <p class="subtitle">Data Scientist</p>
+  <p class="subtitle">Data Science</p>
   <p>Turning complex data into actionable insights and scalable solutions.</p>
+    <div class="hero-cta">
+    <a href="{{ '/projects/crimetology/' | relative_url }}" class="btn btn--primary">View Featured Project</a>
+    <a href="https://github.com/ClimatologyProjectProfile" target="_blank" rel="noopener" class="btn btn--inverse">GitHub Profile</a>
+  </div>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
+<section id="about" class="content-block">  
+<h2>About Me</h2>
   <p>
     I am a data scientist passionate about building models that solve real-world problems. 
-    With a background in Climate Science, I specialize in 
+    With a background in Policing and Climate Science, I specialize in 
     predictive methods, data visualization, and mathematical modelling.
   </p>
 </section>
 
-<section id="skills">
+<section id="skills" class="content-block">
   <h2>Technical Toolkit</h2>
-  <div class="skills-grid">
-    <ul>
-      <li><strong>Languages:</strong> Python, ...</li>
-      <li><strong>Tools:</strong> Docker, Git, DevOps, Jupyter</li>
-    </ul>
-  </div>
+  
+  <table class="toolkit-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Technologies & Frameworks</th>
+        <th>Primary Portfolio Application</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Core & Modeling</strong></td>
+        <td>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">SciPy</span>
+          <span class="tech-badge">Statsmodels</span>
+        </td>
+        <td>Statistical inference, binary logistic regression, spatial KD-Trees</td>
+      </tr>
+      <tr>
+        <td><strong>Spatial & Data Pipeline</strong></td>
+        <td>
+          <span class="tech-badge">DuckDB</span>
+          <span class="tech-badge">DBSCAN</span>
+          <span class="tech-badge">Geospatial ETL</span>
+        </td>
+        <td>Density clustering across 1.26M crime records, SQL database pipelines</td>
+      </tr>
+      <tr>
+        <td><strong>DevOps & Tooling</strong></td>
+        <td>
+          <span class="tech-badge">Git</span>
+          <span class="tech-badge">Linux</span>
+          <span class="tech-badge">GitHub Pages</span>
+          <span class="tech-badge">Jekyll</span>
+        </td>
+        <td>Version control, reproducible builds, open-access web deployment</td>
+      </tr>
+      <tr>
+        <td><strong>Science & Viz</strong></td>
+        <td>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Plotly</span>
+          <span class="tech-badge">LaTeX</span>
+        </td>
+        <td>Publication-quality figure generation and mathematical documentation</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
+<section id="featured-work" class="content-block">
+  <h2>Featured Project</h2>
+  <div class="project-card-featured">
+    <div class="project-header">
+      <span class="project-tag">Open Access Case Study: Crimetology</span>
+    </div>
+
+    <p>A end to end open source Data Science project on how Weather Shifts Spatial Crime Patterns. Core development tools include an end-to-end spatial-temporal pipeline joining 1.26M policing records with gridded climate observations. Core analytics include to identify micro-scale behavioral patterns using DBSCAN density clustering and binary logistic regression.</p>
+    <br>
+    <p> <b>Results</b>: <br><br>Results indicated that higher temperatures were associated with increased odds of crimes occurring within Leisure environments. Relative humidity demonstrated limited standalone explanatory power but contributed when considered jointly with temperature, suggesting a combined environmental effect consistent with thermal comfort and outdoor activity patterns.</p>
+      <div class="project-image-container">
+        <img src="{{ '/assets/images/understanding_odds.png' | relative_url }}" alt="Understanding Odds Chart" class="project-featured-image">
+      </div>
+
+    <a href="{{ '/projects/crimetology/' | relative_url }}" class="btn btn--primary" style="margin-top: 1rem;">Learn More About This Project</a>
+  </div>
+</section>

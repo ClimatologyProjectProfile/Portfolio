@@ -50,7 +50,7 @@ Every 1% increase in relative humidity increases the odds of crime in a Leisure 
 
 When combines this increases the odds of crime events in Leisure zones by **5.37%**
 
-![Fig1: Understand Odds]({{ '/assets/images/understanding_odds.png' | relative_url }})
+![Fig1: Understand Odds]({{ '/assets/images/understanding_odds.png' | relative_url }})  
 *Figure 1: Conceptual overview of how atmospheric variables shift the log-odds of spatial crime occurrence. When evaluated simultaneously, maximum temperature and relative humidity combine to increase the odds of crime in Leisure contexts by 5.37%.*
 
 
