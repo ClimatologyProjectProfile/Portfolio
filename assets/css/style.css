@@ -32,11 +32,11 @@
 
 /* Custom Wide Layout Overrides */
 #main {
-  max-width: 80% !important;
-  margin-left: 5% !important;
-  margin-right: 5% !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
+  max-width: 60% !important;
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 
 @media (min-width: 64em) {
@@ -50,14 +50,14 @@
   /* Stretch content area across remaining space */
   .page {
     float: right !important;
-    width: calc(100% - 350px) !important;
+    width: calc(100% - 100px) !important;
     padding-right: 0 !important;
   }
 }
 
 /* Align Top Navigation Masthead with the wide layout */
 .masthead {
-  max-width: 80% !important;
+  max-width: 60% !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
