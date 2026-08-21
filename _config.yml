@@ -72,6 +72,7 @@ defaults:
       layout: single
       read_time: true
       comments: true
+      mathax: true
       share: true
       sidebar:
         nav: "docs"  
