@@ -5,27 +5,75 @@ author_profile: true
 
 
 <section id="hero">
+  <span class="hero-badge">Apprenticeship Portfolio</span>
   <h1>Intro</h1>
-  <p class="subtitle">Data Scientist</p>
+  <p class="subtitle">Data Science</p>
   <p>Turning complex data into actionable insights and scalable solutions.</p>
+    <div class="hero-cta">
+    <a href="{{ '/projects/crimetology/' | relative_url }}" class="btn btn--primary">View Featured Project</a>
+    <a href="https://github.com/ClimatologyProjectProfile" target="_blank" rel="noopener" class="btn btn--inverse">GitHub Profile</a>
+  </div>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
+<section id="about" class="content-block">  
+<h2>About Me</h2>
   <p>
     I am a data scientist passionate about building models that solve real-world problems. 
-    With a background in Climate Science, I specialize in 
+    With a background in Policing and Climate Science, I specialize in 
     predictive methods, data visualization, and mathematical modelling.
   </p>
 </section>
 
-<section id="skills">
+<section id="skills" class="content-block">
   <h2>Technical Toolkit</h2>
-  <div class="skills-grid">
-    <ul>
-      <li><strong>Languages:</strong> Python, ...</li>
-      <li><strong>Tools:</strong> Docker, Git, DevOps, Jupyter</li>
-    </ul>
+  
+  <div class="skills-grid-wrapper">
+    <!-- Category 1 -->
+    <div class="skill-card">
+      <h3>Core & Modeling</h3>
+      <p>Python, Pandas, NumPy, SciPy, Statsmodels, Scikit-Learn</p>
+    </div>
+
+    <!-- Category 2 -->
+    <div class="skill-card">
+      <h3>Spatial & Data Engineering</h3>
+      <p>DuckDB, Spatial KD-Trees, DBSCAN Clustering, Geospatial ETL</p>
+    </div>
+
+    <!-- Category 3 -->
+    <div class="skill-card">
+      <h3>DevOps & Deployment</h3>
+      <p>Git, Linux, VSCode, GitHub Pages</p>
+    </div>
+
+    <!-- Category 4 -->
+    <div class="skill-card">
+      <h3>Visualization & Science</h3>
+      <p>Matplotlib, Plotly, LaTeX, iPython Notebooks</p>
+    </div>
   </div>
 </section>
 
+
+<section id="featured-work" class="content-block">
+  <h2>Featured Project</h2>
+  <div class="project-card-featured">
+    <div class="project-header">
+      <span class="project-tag">Open Access Case Study</span>
+      <h3>Crimetology: How Weather Shifts Spatial Crime Patterns</h3>
+    </div>
+    <p> An end-to-end spatial-temporal pipeline joining 1.26M policing records with gridded climate observations to identify micro-scale behavioral patterns using DBSCAN density clustering and binary logistic regression.</p>
+    </div>
+      <div class="project-image-container">
+        <img src="{{ '/assets/images/understanding_odds.png' | relative_url }}" alt="Understanding Odds Chart" class="project-featured-image">
+      </div>
+    </div>
+    <div class="project-tech-stack">
+      <span class="tech-badge">Python</span>
+      <span class="tech-badge">DuckDB</span>
+      <span class="tech-badge">SciPy</span>
+      <span class="tech-badge">Statsmodels</span>
+    </div>
+    <a href="{{ '/projects/crimetology/' | relative_url }}" class="btn btn--primary" style="margin-top: 1rem;">Read Full Study →</a>
+  </div>
+</section>
