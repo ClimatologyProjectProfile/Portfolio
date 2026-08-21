@@ -1,6 +1,7 @@
 ---
 permalink: /projects/crimetology/
 title: "Crimetology"
+classes: wide
 header:
   teaser: /assets/images/crimetology_image_small.png
 layout: home_norecent
