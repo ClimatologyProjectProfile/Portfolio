@@ -63,3 +63,24 @@
     padding-right: 0 !important;
   }
 }
+
+/*Attempt to get rid of top of page white space*/
+#main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.page {
+  padding-top: 0 !important;
+}
+
+#hero, .hero-section {
+  margin-top: 0 !important;
+  padding-top: 1rem !important; 
+}
+
+.page__hero, 
+.page__inner-wrap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
