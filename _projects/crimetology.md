@@ -73,7 +73,7 @@ To establish a transparent, reproducible workflow without enterprise database co
 * **Handling Missing Identifiers:** Synthetic IDs were generated for ~16% of records with missing reference numbers to avoid sample-selection bias. Tracking over time revealed an overall improvement in upstream archive quality.
 * **Spatial Matching:** Implemented a `scipy.spatial.cKDTree` nearest-neighbor lookup to pair each crime location with 1km-gridded CEDA HadUK weather observations.
 
-![Fig2: Synthetic ID Quality Control](https://github.com/ClimatologyProjectProfile/Portfolio/blob/master/assets/images/fig2_synID.png)  
+![Fig2: Synthetic ID Quality Control]({{ '/assets/images/fig2_synID.png' | relative_url }})  
 *Figure 2: Time-series monitoring of synthetic crime IDs (2015–2025), showing a downward quality-control trend and seasonal update spikes.*
 
 
@@ -83,7 +83,7 @@ To establish a transparent, reproducible workflow without enterprise database co
 
 Open police records anonymize exact crime coordinates and lack explicit land-use labels (e.g., "nightlife district" vs. "shopping centre"). To solve this, **DBSCAN density clustering** was applied to group 1.26M crime records into **9,200+ spatial clistures** across Norfolk and Suffolk.
 
-![Fig3: Norfolk and Suffolk Boundary Dataset](https://github.com/ClimatologyProjectProfile/Portfolio/blob/master/assets/images/fig3_boundary_data.png)  
+![Fig3: Norfolk and Suffolk Boundary Dataset]({{ '/assets/images/fig3_boundary_data.png' | relative_url }})  
 *Figure 3: Constrained study area consisting of ~1.26 million spatially filtered crime records across Norfolk and Suffolk.*
 
 ### Engineering Operational Labels
@@ -91,13 +91,13 @@ Clusters were categorized into **Leisure**, **Retail**, or **Other** contexts ba
 * **Retail Context:** High proportion of shoplifting, commercial theft, and burglary.
 * **Leisure Context:** High proportion of public order offences, anti-social behavior, and violence.
 
-![Fig4: Crime Type Skew Histograms](https://github.com/ClimatologyProjectProfile/Portfolio/blob/master/assets/images/fig4_histograms.png)  
+![Fig4: Crime Type Skew Histograms]({{ '/assets/images/fig4_histograms.png' | relative_url }})  
 *Figure 4: Distribution of Retail, Leisure, and Other crime-type prevalence across clusters, supporting quantile-based context classification.*
 
 Histograms revealed that Retail-associated crime distributions were heavily right-skewed, justifying quantile-based threshold over arbitrary, say 50%, cut-offs. Clusters in the top 10% of each crime type occcuring (leisure or retail) where given a label. Every other cluster was treated as 'mixed' and not labelled.  
 
 
-![Fig5: Clusters with lables](https://github.com/ClimatologyProjectProfile/Portfolio/blob/master/assets/images/lablelled_clusters.png)  
+![Fig5: Clusters with lables](({{ '/assets/images/lablelled_clusters.png' | relative_url }}))  
 *Figure 5: Clusters given a context label. Yellow = Retail label, Blue = Leisure Label.*
 
 
@@ -110,7 +110,7 @@ A Binary Logistic Regression model evaluated whether maximum temperature and rel
 Using the exact coefficients from the Logit model we can plot how weather translates into predicted probabilities of crime occurring in a Leisure context.
 
 
-![Figure6: Bivariate Logistic Regression Curves](https://github.com/ClimatologyProjectProfile/Portfolio/blob/master/assets/images/probability_leisure_context.png)
+![Figure6: Bivariate Logistic Regression Curves]({{ '/assets/images/probability_leisure_context.png' | relative_url }})
 
 *Figure 6: The joint atmospheric effect, this chart demonstrates how temperature and relative humidity work together. High humidity shifts the entire curve upward, increasing the odds of leisure-context crimes across all temperature ranges.*
 
@@ -138,7 +138,7 @@ we get our bivariate model as
 
 $$\ln\left(\frac{P}{1 - P}\right) = -3.5269 + 0.0315(\text{tasmax}) + 0.0205(\text{hurs}).$$
 
-Rearage this gives you
+Rearange this gives you
 
 $$P(\text{Leisure}) = \frac{1}{1 + e^{-(-3.5269 + 0.0315 \cdot \text{tasmax} + 0.0205 \cdot \text{hurs})}}$$
 
