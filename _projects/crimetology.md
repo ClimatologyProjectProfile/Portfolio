@@ -19,6 +19,7 @@ mathjax: true
 A data science project investigating how weather influences crime occurrence across Leisure versus Retail areas.
 
 Reproduce This Project Yourself:
+
 | Resource | Description | Link |
 | --- | --- | --- |
 | **Crime Data** | Raw UK Police street-level data archive | [data.police.uk](https://data.police.uk/data/archive/) |
