@@ -98,7 +98,7 @@ Clusters were categorized into **Leisure**, **Retail**, or **Other** contexts ba
 Histograms revealed that Retail-associated crime distributions were heavily right-skewed, justifying quantile-based threshold over arbitrary, say 50%, cut-offs. Clusters in the top 10% of each crime type occcuring (leisure or retail) where given a label. Every other cluster was treated as 'mixed' and not labelled.  
 
 
-![Fig5: Clusters with lables](({{ '/assets/images/lablelled_clusters.png' | relative_url }}))  
+![Fig5: Clusters with lables]({{ '/assets/images/lablelled_clusters.png' | relative_url }})  
 *Figure 5: Clusters given a context label. Yellow = Retail label, Blue = Leisure Label.*
 
 
