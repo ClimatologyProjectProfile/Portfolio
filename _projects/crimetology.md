@@ -5,6 +5,8 @@ header:
   teaser: /assets/images/crimetology_image_small.png
 layout: home_norecent
 author_profile: true
+use_math: true
+mathjax: true
 ---
 <!-- Some Bages -->
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
